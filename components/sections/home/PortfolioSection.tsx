@@ -60,7 +60,7 @@ export default function PortfolioSection() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.8, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] as const }}
               className="group relative rounded-3xl overflow-hidden aspect-[4/3] md:aspect-[21/9] cursor-pointer"
             >
               {/* Background Image */}

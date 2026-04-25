@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] as const }}
             >
               <GlassCard className="h-full flex flex-col bg-white">
                 <Quote className="w-10 h-10 text-[#5E3BB0]/20 mb-6" />

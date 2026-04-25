@@ -78,7 +78,7 @@ function BentoCard({ card }: CardProps) {
       initial={{ opacity: 0, y: 30, rotate: 0 }}
       whileInView={{ opacity: 1, y: 0, rotate: card.rotate }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6, delay: card.delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.6, delay: card.delay, ease: [0.22, 1, 0.36, 1] as const }}
       whileHover={{
         rotate: "0deg",
         y: -6,

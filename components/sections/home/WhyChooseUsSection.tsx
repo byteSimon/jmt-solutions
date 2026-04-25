@@ -39,7 +39,7 @@ export default function WhyChooseUsSection() {
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
             className="flex flex-col"
           >
             <div className="bg-white/40 backdrop-blur-sm border border-slate-200/60 rounded-3xl p-8 lg:p-12 h-full flex flex-col relative overflow-hidden">
@@ -66,7 +66,7 @@ export default function WhyChooseUsSection() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
             className="flex flex-col"
           >
             <GlassCard dark className="h-full flex flex-col !p-8 lg:!p-12">

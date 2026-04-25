@@ -48,7 +48,7 @@ function BentoGrid() {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] as const }}
         className="row-span-2 bg-[#C8B8F0] rounded-2xl sm:rounded-3xl p-6 sm:p-7 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-xl transition-all duration-400 cursor-default overflow-hidden relative"
       >
         <div>
@@ -71,7 +71,7 @@ function BentoGrid() {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.6, delay: 0.35, ease: [0.22, 1, 0.36, 1] as const }}
         className="bg-[#5E3BB0] rounded-2xl sm:rounded-3xl p-6 sm:p-7 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-xl transition-all duration-400 cursor-default overflow-hidden relative"
       >
         <TrendingUp className="w-7 h-7 text-[#EDE8FF]/60 mb-2" />
@@ -86,7 +86,7 @@ function BentoGrid() {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] as const }}
         className="bg-[#3D2478] rounded-2xl sm:rounded-3xl p-6 sm:p-7 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-xl transition-all duration-400 cursor-default overflow-hidden relative"
       >
         <div className="flex items-center gap-2 mb-3">
@@ -111,7 +111,7 @@ function BentoGrid() {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.6, delay: 0.65, ease: [0.22, 1, 0.36, 1] as const }}
         className="col-span-2 bg-[#1a1035] rounded-2xl sm:rounded-3xl p-6 sm:p-7 flex items-center justify-between group hover:-translate-y-1 hover:shadow-xl transition-all duration-400 cursor-default overflow-hidden relative"
       >
         <div className="relative z-10">
@@ -268,7 +268,7 @@ export default function HeroSection() {
                   className="absolute -bottom-1 left-0 right-0 h-[5px] rounded-full bg-gradient-to-r from-[#7B55CC] to-[#5E3BB0] origin-left"
                   initial={{ scaleX: 0, opacity: 0 }}
                   animate={{ scaleX: 1, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 0.8, delay: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
                 />
               </span>
             </motion.h1>
@@ -347,7 +347,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
             className="order-1 lg:order-2"
           >
             <BentoGrid />

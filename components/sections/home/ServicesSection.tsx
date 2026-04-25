@@ -63,7 +63,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
@@ -101,11 +101,11 @@ export default function ServicesSection() {
                       {service.title}
                     </h3>
                   </div>
-                  
+
                   <p className="text-slate-600 leading-relaxed mb-8 flex-1">
                     {service.description}
                   </p>
-                  
+
                   <div className="flex items-center text-sm font-bold text-[#5E3BB0]">
                     <span className="relative overflow-hidden">
                       <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">Learn more</span>
