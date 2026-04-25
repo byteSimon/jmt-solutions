@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
+@theme {
+  --font-display: var(--font-display), "Bricolage Grotesque", sans-serif;
+  --font-body: var(--font-body), "DM Sans", sans-serif;
+  
+  /* ─── Purple theme palette based on #5E3BB0 ──────────────────────────── */
+  --color-primary: #5E3BB0;
+  --color-primary-light: #7B55CC;
+  --color-primary-dark: #3D2478;
+  --color-secondary: #444444;
+  --color-accent-glow: rgba(94, 59, 176, 0.35);
+  --color-text-on-dark: #EDE8FF;
+  --color-text-muted-purple: #C4B5F4;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #f4f4ff;
+  --bg-secondary: #f4f4ff;
+  --bg-card: #1a1a1a;
+  --accent: #5E3BB0;
+  --accent-light: #7B55CC;
+  --accent-dark: #3D2478;
+  --accent-glow: rgba(94, 59, 176, 0.35);
+  --text-primary: #111111;
+  --text-secondary: #444444;
+  --text-muted: #666666;
+  --text-on-dark: #EDE8FF;
+  --text-muted-purple: #C4B5F4;
+  --border: #2a2a2a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Bento grid: flatten card rotation on mobile ─────────────────────── */
+@media (max-width: 767px) {
+  [style*="gridArea"] {
+    grid-area: auto !important;
+    transform: rotate(0deg) !important;
+  }
+}
+
+/* ─── Utility keyframes ───────────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
